@@ -1,0 +1,64 @@
+<section>
+  <p>The table below lists all of the band names.<br>
+     To add a venue the band has played at, got to the band's page by clicking on their name.<br>
+     Press the 'Delete' button if you wish to delete a band.<br>
+     If you wish to rename a band, fill in the space 'Enter New Name Here' and then click the button below.</p>
+</section>
+
+<section>
+  <% if Band.any?() %>
+
+  <table class="table table-hover">
+
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Rename</th>
+        <th>Delete<th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% Band.all().each() do |band| %>
+        <tr>
+
+          <td class = "id">
+            <a href="/bands/<%= band.id() %>"><%= band.name() %></a>
+          </td>
+
+          <td>
+            <form action='/bands/<%= band.id() %>' method='post'>
+              <input name="_method" type="hidden" value="patch">
+              <input name="new_name" placeholder="Enter New Name Here" />
+              <button type="submit">Rename Band</button>
+            </form>
+          </td>
+
+          <td>
+            <form action='/bands/<%= band.id() %>' method='post'>
+              <input name="_method" type="hidden" value="delete">
+              <button type="submit">Delete Band</button>
+            </form>
+          </td>
+
+        </tr>
+
+        <% end %>
+      </tbody>
+    </table>
+
+    <% end %>
+
+</section>
+
+<section>
+  <form action="/bands" method="post">
+    <fieldset>
+      <legend>Add a Band</legend>
+      <label for="band_name">Band Name</label>
+      <input name="band_name" placeholder="Enter Band Name Here" />
+    </fieldset>
+    <button type="submit">Add Band</button>
+    <button type="reset">Clear Form</button>
+  </form>
+</section>

@@ -1,0 +1,67 @@
+<% band = Band.find(@band_id) %>
+
+<h2><%= band.name() %></h2>
+
+  <section>
+    <h3>Below are the venues where <%= band.name() %> played:</h3>
+    <% if band.venues.any? %>
+    <dl>
+      <% band.venues.each() do |venue| %>
+      <dt><%= venue.name() %></dt>
+      <dd>Location: <%= venue.location() %></dd>
+      <% end %>
+    </dl>
+    <% else %>
+    <p>There are no venues added yet!</p>
+    <% end %>
+  </section>
+
+<% if Venue.all().any? %>
+  <section>
+    <h3>Check the venues where <%= band.name() %> played below:</h3>
+      <form action="/band_venues" method="post">
+        <input hidden value="<%=band.id() %>" name="band_id">
+        <fieldset>
+
+          <% @venues.each do |venue| %>
+          <% band.venues.each() do |venue_present| %>
+          <% if venue_present != venue.name() %>
+          <div class="checkbox">
+            <label for="venue_ids">Venues</label>
+            <input type="checkbox" name="venue_ids[]" value="<%=venue.id() %>"> <%=venue.name() %> : <%=venue.location() %>
+          </div>
+          <% end %>
+          <% end %>
+          <% end %>
+
+
+
+        </fieldset>
+        <button type="submit">Add Venue to Band</button>
+        <button type="reset">Clear Form</button>
+      </form>
+  </section>
+<% end %>
+
+  <section>
+    <h3>Don't see a venue where the band played at on the list? Add it below:</h3>
+    <form action="/venues" method="post">
+      <input hidden value="<%=band.id() %>" name="band_id">
+      <fieldset>
+        <legend>Venue Name</legend>
+        <label for="venue_name">Venue Name</label>
+        <input name="venue_name" placeholder="Enter Venue Name Here" />
+      </fieldset>
+      <fieldset>
+        <legend>Venue Location</legend>
+        <label for="venue_location">Venue Name</label>
+        <input name="venue_location" placeholder="Enter Venue Location Here" />
+      </fieldset>
+      <button type="submit">Add Venue</button>
+      <button type="reset">Clear Form</button>
+    </form>
+  </section>
+
+  <section>
+    <a href="/">Back</a>
+  </section>
