@@ -49,7 +49,7 @@ post('/venues') do
 end
 
 
-post('/band_venues') do
+post('/band_venues') do  
   @venues = Venue.all()
   venue_ids = params.fetch('venue_ids')
   venue_ids.each() do |venue_id|

@@ -122,7 +122,7 @@ html {
   align-items: center;
   padding: 1rem;
   height: 100%;
-  background: #d0dad8;
+  background: #191C59;
   color: #222;
   font-family: 'Playfair Display', serif;
   font-weight: 400;
@@ -142,7 +142,7 @@ body {
 }
 
 a {
-  border-color: #d0dad8;
+  border-color: #191C59;
   color: #0e745c;
   -webkit-transition-duration: .1s;
   transition-duration: .1s;
@@ -156,7 +156,7 @@ a::before {
   display: inline-block;
   vertical-align: top;
   margin-right: .125em;
-  color: #d0dad8;
+  color: #191C59;
   font-family: FontAwesome;
   font-size: 1rem;
   font-style: normal;
@@ -214,7 +214,7 @@ footer {
 
 header {
   height: auto;
-  border-bottom: 1px dashed #d0dad8;
+  border-bottom: 1px dashed #191C59;
 }
 
 h1 {
@@ -251,7 +251,7 @@ main {
 
 section + section {
   margin-top: 1.5rem;
-  border-top: 1px dashed #d0dad8;
+  border-top: 1px dashed #191C59;
 }
 
 form {
@@ -276,7 +276,7 @@ input:not([type="checkbox"]) {
   -ms-flex: 1;
   flex: 1 100%;
   padding: .25rem .5rem;
-  border-bottom: 1px solid #d0dad8;
+  border-bottom: 1px solid #191C59;
   background: transparent;
   -webkit-transition-duration: .1s;
   transition-duration: .1s
@@ -288,7 +288,7 @@ textarea {
   min-height: 6rem;
   margin: 1.5rem auto;
   padding: .25rem .5rem;
-  border: 1px solid #d0dad8;
+  border: 1px solid #191C59;
 }
 
 input:hover,
@@ -298,7 +298,7 @@ textarea:hover,
 textarea:active,
 textarea:focus {
   border-bottom-color: #0e745c;
-  box-shadow: 0 2px 1px -1px #d0dad8;
+  box-shadow: 0 2px 1px -1px #191C59;
 }
 
 button {
@@ -315,7 +315,7 @@ button {
   transition-duration: .1s
 }
 [type="submit"] {
-  background: #d0dad8;
+  background: #191C59;
   background-image: -webkit-linear-gradient(left, #0e745c 0%, #0e745c 50%, transparent 50%, transparent 100%);
   background-image: linear-gradient(to right, #0e745c 0%, #0e745c 50%, transparent 50%, transparent 100%);
   background-size: 200% 100%;
@@ -366,7 +366,7 @@ button:focus {
 
 footer {
   height: 4rem;
-  border-top: 1px dashed #d0dad8;
+  border-top: 1px dashed #191C59;
 }
 footer p {
   margin: auto;
