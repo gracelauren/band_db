@@ -9,7 +9,7 @@ describe(Band) do
     expect(band1.name()).to eq("James Blake")
   end
 
-  it("will order the recipes alphabetically") do
+  it("will order the bands alphabetically") do
     band2= Band.create({:name => "Bob Dylan" })
     band1= Band.create({:name => "Z Z Top" })
     expect(Band.all()).to eq([band2, band1])
