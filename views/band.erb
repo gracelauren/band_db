@@ -6,7 +6,7 @@
     <h3>Below are the venues where <%= band.name() %> played:</h3>
     <% if band.venues.any? %>
     <dl>
-      <% band.venues.each() do |venue| %>
+      <% band.venues.uniq.each() do |venue| %>
       <dt><%= venue.name() %></dt>
       <dd>Location: <%= venue.location() %></dd>
       <% end %>

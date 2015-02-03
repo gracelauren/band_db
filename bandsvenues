@@ -1,0 +1,4 @@
+#take out dupilicates from join table
+
+  Venue.find(:all,
+  :conditions => ['id NOT IN (?)', the_band.venue_ids])

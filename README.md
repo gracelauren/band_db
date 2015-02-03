@@ -23,7 +23,7 @@ Start the database in another tab of the terminal:
 $ postgres
 ```
 
-Create the databases and tables by cd-ing into your band_db-master folder then in the terminal run the following:
+Create the databases and tables by cd-ing into your band_db folder then in the terminal run the following:
 
 ```
 
