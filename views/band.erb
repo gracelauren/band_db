@@ -16,13 +16,13 @@
     <% end %>
   </section>
 
-<% if Venue.all().any? %>
+<% if band.venues_not_played.any? %>
   <section>
     <h3>Check the venues where <%= band.name() %> played below:</h3>
       <form action="/band_venues" method="post">
         <input hidden value="<%=band.id() %>" name="band_id">
         <fieldset>
-          <% @venues.each do |venue| %>
+          <% band.venues_not_played do |venue| %>
               <div class="checkbox">
                 <label for="venue_ids">Venues</label>
                 <input type="checkbox" name="venue_ids[]" value="<%=venue.id() %>"> <%=venue.name() %> : <%=venue.location() %>
@@ -33,10 +33,14 @@
         <button type="reset">Clear Form</button>
       </form>
   </section>
+<% else %>
+  <section>
+    <h5> Please add more venues in the section below. </h5>
+  </section>
 <% end %>
 
   <section>
-    <h3>Don't see a venue where the band played at on the list? Add it below:</h3>
+    <h3>Don't see a venue where the band played at? Add it below:</h3>
     <form action="/venues" method="post">
       <input hidden value="<%=band.id() %>" name="band_id">
       <fieldset>

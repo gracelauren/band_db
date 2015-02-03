@@ -8,6 +8,8 @@ class Venue < ActiveRecord::Base
 
   default_scope { order('name') }
 
+
+
   private
 
   define_method(:capitalize_name) do

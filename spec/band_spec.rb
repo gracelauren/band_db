@@ -16,4 +16,13 @@ describe(Band) do
     expect(Band.all()).to eq([band2, band1])
   end
 
+  describe('#venues_not_played') do
+    it("will order the bands alphabetically") do
+      band1= Band.create({:name => "Bob Dylan" })
+      venue1= Venue.create({ :name => "Dark Horse", :location => "New Mexico" })
+      venue2= Venue.create({ :name => "Blue Velvet", :location => "Pokhara, Nepal" })
+      band1.venues.push(venue1)
+      expect(band1.venues_not_played()).to eq([venue2])
+    end
+  end
 end
