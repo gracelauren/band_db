@@ -305,7 +305,7 @@ button {
   width: 49%;
   margin-bottom: 1.5rem;
   padding: .5rem 1rem;
-  color: #888;
+  /*color: #888;*/
   font-family: Oswald, sans-serif;
   font-weight: 400;
   letter-spacing: 1px;
@@ -315,6 +315,7 @@ button {
   transition-duration: .1s
 }
 [type="submit"] {
+  color: #fff;
   background: #191C59;
   background-image: -webkit-linear-gradient(left, #56072f 0%, #56072f 50%, transparent 50%, transparent 100%);
   background-image: linear-gradient(to right, #56072f 0%, #56072f 50%, transparent 50%, transparent 100%);
@@ -323,7 +324,7 @@ button {
 }
 [type="reset"] {
   float: right;
-
+  color: #888;
   background: #FCEDCF;
   background-image: -webkit-linear-gradient(left, #F7C96E 0%, #F7C96E 50%, transparent 50%, transparent 100%);
   background-image: linear-gradient(to right, #F7C96E 0%, #F7C96E 50%, transparent 50%, transparent 100%);
@@ -333,7 +334,7 @@ button {
 
 [type="delete"] {
   float: center;
-
+  color: #888;
   background: #e5cccd;
   background-image: -webkit-linear-gradient(left, #d7686a 0%, #d7686a 50%, transparent 50%, transparent 100%);
   background-image: linear-gradient(to right, #d7686a 0%, #d7686a 50%, transparent 50%, transparent 100%);
