@@ -22,7 +22,7 @@
       <form action="/band_venues" method="post">
         <input hidden value="<%=band.id() %>" name="band_id">
         <fieldset>
-          <% band.venues_not_played do |venue| %>
+          <% band.venues_not_played.each do |venue| %>
               <div class="checkbox">
                 <label for="venue_ids">Venues</label>
                 <input type="checkbox" name="venue_ids[]" value="<%=venue.id() %>"> <%=venue.name() %> : <%=venue.location() %>

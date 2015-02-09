@@ -39,7 +39,6 @@ delete('/bands/:id') do
 end
 
 post('/venues') do
-  @venues = Venue.all()
   @venue_name = params.fetch('venue_name')
   @venue_location = params.fetch('venue_location')
   Venue.create({ :name => @venue_name, :location => @venue_location })
