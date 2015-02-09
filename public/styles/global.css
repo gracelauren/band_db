@@ -143,14 +143,14 @@ body {
 
 a {
   border-color: #191C59;
-  color: #0e745c;
+  color: #56072f;
   -webkit-transition-duration: .1s;
   transition-duration: .1s;
 }
 a:hover,
 a:active,
 a:focus {
-  border-color: #0e745c;
+  border-color: #56072f;
 }
 a::before {
   display: inline-block;
@@ -167,7 +167,7 @@ a::before {
 a:hover::before,
 a:active::before,
 a:focus::before {
-  color: #0e745c;
+  color: #56072f;
 }
 a[title="Permalink"]::before {
   content: "\f0c1";
@@ -297,7 +297,7 @@ input:focus,
 textarea:hover,
 textarea:active,
 textarea:focus {
-  border-bottom-color: #0e745c;
+  border-bottom-color: #56072f;
   box-shadow: 0 2px 1px -1px #191C59;
 }
 
@@ -316,8 +316,8 @@ button {
 }
 [type="submit"] {
   background: #191C59;
-  background-image: -webkit-linear-gradient(left, #0e745c 0%, #0e745c 50%, transparent 50%, transparent 100%);
-  background-image: linear-gradient(to right, #0e745c 0%, #0e745c 50%, transparent 50%, transparent 100%);
+  background-image: -webkit-linear-gradient(left, #56072f 0%, #56072f 50%, transparent 50%, transparent 100%);
+  background-image: linear-gradient(to right, #56072f 0%, #56072f 50%, transparent 50%, transparent 100%);
   background-size: 200% 100%;
   background-position: 100%;
 }
@@ -327,6 +327,16 @@ button {
   background: #FCEDCF;
   background-image: -webkit-linear-gradient(left, #F7C96E 0%, #F7C96E 50%, transparent 50%, transparent 100%);
   background-image: linear-gradient(to right, #F7C96E 0%, #F7C96E 50%, transparent 50%, transparent 100%);
+  background-size: 200% 100%;
+  background-position: 100%;
+}
+
+[type="delete"] {
+  float: center;
+
+  background: #e5cccd;
+  background-image: -webkit-linear-gradient(left, #d7686a 0%, #d7686a 50%, transparent 50%, transparent 100%);
+  background-image: linear-gradient(to right, #d7686a 0%, #d7686a 50%, transparent 50%, transparent 100%);
   background-size: 200% 100%;
   background-position: 100%;
 }
@@ -407,6 +417,10 @@ button::before,
   content: "\f021\0020";
 }
 
+[type="delete"]::before {
+  content: "\f1f8\0020";
+}
+
 [href="/"]::before {
   content: "\f053";
   margin-right: .25rem;
@@ -438,12 +452,12 @@ button::before,
   background-position: 0%;
 }
 
-[action="/purchases"] fieldset * {
-  width: auto;
-}
-
 [type="checkbox"] {
   -webkit-appearance: checkbox;
   -moz-appearance: checkbox;
   appearance: checkbox;
+}
+
+td {
+  vertical-align: middle !important;
 }
