@@ -9,6 +9,8 @@ gem("rake")
 gem("pg")
 gem("pry")
 gem 'cowsay'
+gem 'rack'
+
 
 
 gem 'sdoc', '~> 0.4.0',          group: :doc
