@@ -17,7 +17,7 @@ describe(Band) do
   end
 
   describe('#venues_not_played') do
-    it("will order the bands alphabetically") do
+    it("display venues not played") do
       band1= Band.create({:name => "Bob Dylan" })
       venue1= Venue.create({ :name => "Dark Horse", :location => "New Mexico" })
       venue2= Venue.create({ :name => "Blue Velvet", :location => "Pokhara, Nepal" })
